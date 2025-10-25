@@ -1,0 +1,1427 @@
+{
+  "metadata": {
+    "run_id": "c80c5e0c-16bc-487a-9757-26d39795a6d0",
+    "start_time": "2025-10-24T15:50:28.434571",
+    "end_time": "2025-10-24T19:39:05.348012",
+    "duration_seconds": 13716.913441,
+    "base_url": "https://pib.gov.in/RssMain.aspx",
+    "max_iterations": 5,
+    "min_quality_score": 60
+  },
+  "summary": {
+    "total_unique_feeds": 47,
+    "total_iterations": 4,
+    "total_urls_tested": 145,
+    "overall_success_rate": 0.5586206896551724,
+    "avg_quality_score": 75.47619047619048
+  },
+  "discovered_feeds": [
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=13&Regid=22",
+      "timestamp": "2025-10-24T18:26:09.583394",
+      "valid": true,
+      "score": 60,
+      "reasoning": "The feed is valid RSS, but the content is limited and some titles are in a non-English script, which might reduce its usefulness for some users. It has a title and description.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "Press Releases",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=1&Regid=6",
+      "timestamp": "2025-10-24T18:37:25.614836",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is a valid RSS 2.0 feed with a title, description, and items. The content appears to be press releases, which are meaningful. However, only 3 items are available in the sample, making it difficult to assess update frequency definitively. Metadata is present, but the language is not specified.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS 2.0",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=1&Regid=5",
+      "timestamp": "2025-10-24T18:38:27.166453",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS. It contains meaningful content in the form of press releases. The metadata is present and reasonably complete. The usefulness is high for those interested in Indian government press releases.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=1&Regid=1",
+      "timestamp": "2025-10-24T18:39:28.441382",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed, contains meaningful content from the Press Information Bureau, and includes title and description. The content appears to be updated frequently. The feed's usefulness is high for those interested in government press releases.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=1&Regid=23",
+      "timestamp": "2025-10-24T18:40:30.157164",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS, contains meaningful news content from the Press Information Bureau, and has complete metadata. The update frequency appears to be high, making it valuable for aggregation.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=1&Regid=22",
+      "timestamp": "2025-10-24T18:41:31.703666",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed RSS. It contains meaningful content in the form of press releases. The metadata is present but minimal. Update frequency cannot be accurately determined without more data, but it appears to be reasonably active.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=16&Regid=5",
+      "timestamp": "2025-10-24T18:43:34.337723",
+      "valid": true,
+      "score": 60,
+      "reasoning": "The feed is valid RSS. It has a title, description, and items. The content appears to be news releases. However, the titles are in a language that is not readily identifiable without further analysis, impacting usability for a general audience. The number of items is low.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Unknown",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=9&Lang=1&Regid=1",
+      "timestamp": "2025-10-24T18:47:50.013536",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS, contains meaningful news content from the Press Information Bureau, and has complete metadata. The presence of a copyright notice is a good indicator of professionalism. The update frequency is likely high given the nature of a press bureau.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=15&Regid=24",
+      "timestamp": "2025-10-24T18:50:44.474563",
+      "valid": true,
+      "score": 70,
+      "reasoning": "The feed is a valid RSS feed with a title and description. The content appears to be news releases from the Press Information Bureau. The single item available is in Malayalam, which might limit its usefulness to some users. More items would be needed to assess update frequency.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Unknown",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=9&Lang=11&Regid=6",
+      "timestamp": "2025-10-24T18:54:58.853789",
+      "valid": true,
+      "score": 70,
+      "reasoning": "The feed is well-formed and contains a title and description. The content appears to be news-related, but the single item available is a notice about a new website and app. The language is primarily Tamil, which may limit its usefulness to some aggregators. The update frequency cannot be determined with only one item.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS 2.0",
+      "content_type": "News",
+      "update_frequency": "Unknown",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=9&Lang=13&Regid=22",
+      "timestamp": "2025-10-24T18:55:53.556927",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed XML and contains a title, description, and at least one item. The item includes a title and a link. The feed appears to be a valid RSS 2.0 feed. The single item suggests the feed may not be very active, but without more data, it's hard to assess the update frequency accurately.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS 2.0",
+      "content_type": "News",
+      "update_frequency": "Unknown",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+      "timestamp": "2025-10-24T18:56:54.674702",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS, contains meaningful press release content from the Press Information Bureau, and includes title and description. The presence of special characters (â) indicates a potential encoding issue, but the feed is still functional. The content is timely and relevant.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=8&Lang=1&Regid=3",
+      "timestamp": "2025-10-24T18:57:56.656130",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is a valid RSS feed with a title, description, and items. The content appears to be news releases from the Press Information Bureau. The presence of a future date (October 24, 2025) in the first item title is unusual and could indicate a data entry error, but doesn't invalidate the feed itself. The feed appears well-formed based on the provided snippet.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=1&Regid=3",
+      "timestamp": "2025-10-24T18:58:58.231496",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS, contains meaningful press release titles and links, and has a title and description. The update frequency appears to be daily based on the number of items. The &amp;amp;amp; encoding suggests some minor issues.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1",
+      "timestamp": "2025-10-24T19:00:00.108721",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS. It contains meaningful news content from the Press Information Bureau. The metadata (title, description) are present. Based on the number of items (20) and the nature of the content, it's likely updated frequently.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=5",
+      "timestamp": "2025-10-24T19:01:02.430539",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is a valid RSS 2.0 feed with a title, description, and items. The content appears to be press releases, which is meaningful. Based on the provided information, the update frequency seems high. Metadata is present and complete.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS 2.0",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=6",
+      "timestamp": "2025-10-24T19:02:04.298821",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS, contains meaningful press release titles from the Press Information Bureau, and includes links to the full articles. The metadata is present and complete.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=17",
+      "timestamp": "2025-10-24T19:03:05.856828",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS, contains meaningful press release titles, and has a standard set of metadata. The content appears to be updated frequently. The feed provides news from the Press Information Bureau, making it valuable for aggregation.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=22",
+      "timestamp": "2025-10-24T19:04:07.673858",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS. It contains meaningful news content from the Press Information Bureau. The presence of title, description, and copyright information indicates good metadata completeness. Based on the number of items (20) and the nature of the content, it's likely updated frequently.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=16&Regid=5",
+      "timestamp": "2025-10-24T19:06:11.534344",
+      "valid": true,
+      "score": 70,
+      "reasoning": "The feed is well-formed and contains news items from the Press Information Bureau. It has a title, description, and copyright information. The content appears to be press releases. However, the language of the first item is not English, which might limit its usefulness to some users. The update frequency cannot be determined without more data.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Unknown",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=11&Regid=6",
+      "timestamp": "2025-10-24T19:12:20.363603",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed RSS. It contains news articles from the Press Information Bureau. The title and description are present. The content appears to be in Tamil. The usefulness depends on the target audience.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=6&Regid=17",
+      "timestamp": "2025-10-24T19:18:29.366737",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is a valid RSS 2.0 feed with a title, description, and items. The content appears to be news releases from the Press Information Bureau. The language of the first item is not English, which might limit its usefulness to some aggregators. Update frequency appears to be high, given the number of items.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS 2.0",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=13&Regid=22",
+      "timestamp": "2025-10-24T19:24:40.150606",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed RSS with a title, description, and items. The content appears to be news releases. The language is not English, which may limit its usefulness to some users. The update frequency appears to be daily based on the 'First Item Title' provided. The metadata is present, but the language being other than English impacts the score.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=8&Lang=2&Regid=1",
+      "timestamp": "2025-10-24T19:25:53.292640",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed XML and contains news articles from the Press Information Bureau. It has a title, description, and copyright information. The content appears to be in Hindi, which might limit its usefulness to some users. The date in the first item title is in the future (2025), which is unusual but doesn't invalidate the feed itself.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=10&Lang=2&Regid=1",
+      "timestamp": "2025-10-24T19:26:44.599403",
+      "valid": true,
+      "score": 70,
+      "reasoning": "The feed is a valid RSS feed with title and description. The content appears to be news releases. However, the single item available for analysis has title in Hindi. More items are needed to assess the update frequency and content quality better.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Unknown",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=9&Lang=15&Regid=24",
+      "timestamp": "2025-10-24T19:37:02.603161",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed RSS. It contains meaningful content, although the title of the first item is in a language other than English. The metadata is present and complete. The usefulness depends on the user's interest in Indian press releases.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1",
+      "timestamp": "2025-10-24T17:58:50.067867",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed XML, contains meaningful news content from the Press Information Bureau, and includes title and description. The update frequency appears to be high based on the 'number of items' and general knowledge of news feeds.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=10&Lang=1&Regid=1",
+      "timestamp": "2025-10-24T17:59:02.843172",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS. It contains meaningful content related to press releases. The metadata is present (title, description). The content appears to be updated frequently. The feed provides valuable information for aggregation related to Indian government press releases.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=8&Lang=1&Regid=1",
+      "timestamp": "2025-10-24T18:00:04.482398",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS. It contains meaningful news content from the Press Information Bureau. The metadata is present (title, description). The content appears to be updated frequently, making it valuable for aggregation.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=16&Regid=5",
+      "timestamp": "2025-10-24T18:02:08.349378",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is a valid RSS feed with a title, description, and items. The content appears to be news releases. The language is not English, which might limit its usefulness to some users. The metadata is present but could be more descriptive.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=8&Lang=16&Regid=5",
+      "timestamp": "2025-10-24T18:03:09.097535",
+      "valid": true,
+      "score": 65,
+      "reasoning": "The feed is well-formed XML and contains metadata. However, the first item has an empty title, and some titles are in a non-English language, which reduces its overall quality for a general audience. The description is basic but present.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=10&Lang=16&Regid=5",
+      "timestamp": "2025-10-24T18:04:10.708417",
+      "valid": true,
+      "score": 60,
+      "reasoning": "The feed is a valid RSS feed with a title and description. It contains items, but the content is in a language other than English, which limits its usefulness for many users. The update frequency cannot be determined without more data.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Unknown",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=8&Lang=11&Regid=6",
+      "timestamp": "2025-10-24T18:05:13.209096",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed RSS. It contains news articles from the Press Information Bureau. The title and description are present. The content appears to be updated regularly. The language is primarily Tamil, which might limit its usefulness to some users.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=11&Regid=6",
+      "timestamp": "2025-10-24T18:06:13.753546",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed RSS. It contains a title, description, and multiple items. The content appears to be news releases from the Press Information Bureau. The language issue with the first item title impacts the score. Assuming the other items are similarly affected, the score would be lower.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=6&Regid=17",
+      "timestamp": "2025-10-24T18:07:16.711512",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS. It contains meaningful press release content from the Press Information Bureau. The metadata (title, description) is present. The content appears to be updated regularly. The presence of content in a language other than English might limit its usefulness to some users.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=8&Lang=6&Regid=17",
+      "timestamp": "2025-10-24T18:08:17.669212",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed XML and contains news articles from the Press Information Bureau. It has a title, description, and copyright information. The content appears to be in Punjabi, which might limit its usefulness to some users. The date in the first item title is in the future (2025), which is unusual but doesn't invalidate the feed itself.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS 2.0",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=10&Lang=6&Regid=17",
+      "timestamp": "2025-10-24T18:09:19.762650",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed and contains meaningful content related to press releases. It has a title, description, and copyright information. The update frequency cannot be accurately determined with only two items, but the content suggests it is likely daily or near-daily.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=13&Regid=22",
+      "timestamp": "2025-10-24T18:10:22.038743",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed and contains news items from the Press Information Bureau. The metadata is present, but the language is not specified in the feed itself and the content appears to be in Gujarati. The usefulness depends on the target audience.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=8&Lang=13&Regid=22",
+      "timestamp": "2025-10-24T18:11:22.797228",
+      "valid": true,
+      "score": 70,
+      "reasoning": "The feed is well-formed XML and contains a title and description. The content appears to be news related, but the presence of a non-English title in the first item raises concerns about the consistency and target audience. The date in the title is in the future.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=10&Lang=13&Regid=22",
+      "timestamp": "2025-10-24T18:12:24.284473",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed XML and contains a title, description, and items with titles and links. The content appears to be press releases. The language is not consistently English, which could be a drawback. The feed seems to be actively updated, although only two items were analyzed.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=22",
+      "timestamp": "2025-10-24T18:13:26.505261",
+      "valid": true,
+      "score": 85,
+      "reasoning": "The feed is well-formed RSS, contains meaningful press release titles, and has a standard structure. The metadata is present and relevant.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=8&Lang=1&Regid=22",
+      "timestamp": "2025-10-24T18:14:27.341775",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed and contains news items from the Press Information Bureau. It has a title, description, and copyright information. The content appears meaningful, providing updates on government activities. The date in the first item title is in the future (August 02, 2025), which is unusual but doesn't invalidate the feed itself. Assuming the other items are more current, the feed is likely updated regularly.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=10&Lang=1&Regid=22",
+      "timestamp": "2025-10-24T18:15:29.332314",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed and contains meaningful content in the form of press releases and advisories. It has a title and description. The update frequency appears to be daily based on the limited information provided, which makes it potentially valuable. However, a full assessment of update frequency would require a longer observation period.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=10&Regid=23",
+      "timestamp": "2025-10-24T18:16:31.919919",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is a valid RSS feed with a title, description, and items. The content appears to be news releases from the Press Information Bureau. However, some titles contain garbled characters, possibly due to encoding issues. The number of items suggests reasonably frequent updates.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=15&Regid=24",
+      "timestamp": "2025-10-24T18:19:36.701731",
+      "valid": true,
+      "score": 75,
+      "reasoning": "The feed is well-formed and contains news articles from the Press Information Bureau. The content appears meaningful, although the language is not specified and the first item's title is in Malayalam. The metadata is present but could be improved with language specification.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Accept"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=8&Lang=15&Regid=24",
+      "timestamp": "2025-10-24T18:20:37.699986",
+      "valid": true,
+      "score": 70,
+      "reasoning": "The feed is well-formed and contains news items from the Press Information Bureau. It has a title and description. The content appears to be in Malayalam, which might limit its usefulness to some users. The update frequency appears to be daily based on the number of items.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Daily",
+      "recommendation": "Review"
+    },
+    {
+      "url": "https://www.pib.gov.in/RssMain.aspx?ModId=10&Lang=15&Regid=24",
+      "timestamp": "2025-10-24T18:21:39.160699",
+      "valid": true,
+      "score": 70,
+      "reasoning": "The feed is a valid RSS feed. It contains meaningful content, although the language (Malayalam) might limit its usefulness to a broader audience. Update frequency is difficult to assess with only one item. Metadata is present but could be more descriptive.",
+      "errors": [],
+      "warnings": [],
+      "http_status": 200,
+      "feed_type": "RSS",
+      "content_type": "News",
+      "update_frequency": "Unknown",
+      "recommendation": "Review"
+    }
+  ],
+  "statistics": {
+    "rag_agent": {
+      "total_discovered_feeds": 81,
+      "total_urls_generated": 145,
+      "total_urls_tested": 145,
+      "success_rate": 0.5586206896551724,
+      "iterations_completed": 4,
+      "iteration_history": [
+        {
+          "iteration": 1,
+          "candidates_generated": 25,
+          "new_feeds_found": 7,
+          "total_feeds": 7,
+          "strategy": "hybrid"
+        },
+        {
+          "iteration": 2,
+          "candidates_generated": 40,
+          "new_feeds_found": 23,
+          "total_feeds": 30,
+          "strategy": "hybrid"
+        },
+        {
+          "iteration": 3,
+          "candidates_generated": 40,
+          "new_feeds_found": 25,
+          "total_feeds": 55,
+          "strategy": "hybrid"
+        },
+        {
+          "iteration": 4,
+          "candidates_generated": 40,
+          "new_feeds_found": 26,
+          "total_feeds": 81,
+          "strategy": "hybrid"
+        }
+      ]
+    },
+    "validator_agent": {
+      "total_validated": 36,
+      "valid_count": 21,
+      "rejected_count": 15,
+      "success_rate": 0.5833333333333334,
+      "avg_quality_score": 75.47619047619048
+    },
+    "learning_report": {
+      "summary": {
+        "total_iterations": 4,
+        "total_feeds_found": 81,
+        "total_urls_tested": 81,
+        "average_success_rate": 1.0
+      },
+      "convergence_assessment": {
+        "converging": false,
+        "reason": "Good discovery rate maintained",
+        "confidence": 0.7,
+        "recommendation": "Continue iterations"
+      },
+      "strategy_recommendation": {
+        "recommended": "hybrid",
+        "score": 0.813,
+        "avg_success_rate": 1.0,
+        "avg_efficiency": 0.5325,
+        "times_used": 4,
+        "all_strategies": {
+          "hybrid": {
+            "score": 0.813,
+            "avg_success": 1.0,
+            "avg_efficiency": 0.5325,
+            "uses": 4
+          }
+        },
+        "confidence": 0.813
+      },
+      "parameter_effectiveness": {},
+      "insights": [
+        "✅ Iteration 1: High success rate (100.0%)",
+        "Strategy 'hybrid' provides balanced exploration",
+        "Coverage low (0%) - significant potential remains",
+        "✅ Iteration 2: High success rate (100.0%)",
+        "Strategy 'hybrid' provides balanced exploration",
+        "Coverage low (1.81%) - significant potential remains",
+        "✅ Iteration 3: High success rate (100.0%)",
+        "Strategy 'hybrid' provides balanced exploration",
+        "Coverage low (2%) - significant potential remains",
+        "✅ Iteration 4: High success rate (100.0%)",
+        "Strategy 'hybrid' provides balanced exploration",
+        "Coverage low (6.67%) - significant potential remains"
+      ],
+      "iteration_history": [
+        {
+          "iteration": 1,
+          "domain": "pib.gov.in",
+          "timestamp": "2025-10-24T18:47:40.266157",
+          "candidates_generated": 25,
+          "candidates_validated": 7,
+          "new_feeds_found": 7,
+          "success_rate": 1.0,
+          "generation_efficiency": 0.28,
+          "strategy": "hybrid",
+          "patterns": {
+            "domain": "www.pib.gov.in",
+            "path": "/RssMain.aspx",
+            "path_patterns": [
+              "/RssMain.aspx"
+            ],
+            "parameters": {
+              "ModId": {
+                "observed_values": [
+                  "10",
+                  "8",
+                  "6"
+                ],
+                "value_count": 3,
+                "type": "numeric",
+                "numeric_range": {
+                  "min": 6,
+                  "max": 10
+                }
+              },
+              "Lang": {
+                "observed_values": [
+                  "13",
+                  "10",
+                  "6",
+                  "1",
+                  "16",
+                  "11",
+                  "15"
+                ],
+                "value_count": 7,
+                "type": "numeric",
+                "numeric_range": {
+                  "min": 1,
+                  "max": 16
+                }
+              },
+              "Regid": {
+                "observed_values": [
+                  "6",
+                  "5",
+                  "1",
+                  "23",
+                  "22",
+                  "17",
+                  "24"
+                ],
+                "value_count": 7,
+                "type": "numeric",
+                "numeric_range": {
+                  "min": 1,
+                  "max": 24
+                }
+              }
+            }
+          }
+        },
+        {
+          "iteration": 2,
+          "domain": "pib.gov.in",
+          "timestamp": "2025-10-24T19:25:43.048468",
+          "candidates_generated": 40,
+          "candidates_validated": 23,
+          "new_feeds_found": 23,
+          "success_rate": 1.0,
+          "generation_efficiency": 0.575,
+          "strategy": "hybrid",
+          "patterns": {
+            "domain": "www.pib.gov.in",
+            "path": "/RssMain.aspx",
+            "path_patterns": [
+              "/RssMain.aspx"
+            ],
+            "parameters": {
+              "ModId": {
+                "type": "numeric",
+                "observed_values": [
+                  "6",
+                  "10",
+                  "8"
+                ],
+                "range": [
+                  6,
+                  10
+                ],
+                "confidence": 1.0,
+                "interpretation": "Module ID, likely representing different sections or categories of news."
+              },
+              "Lang": {
+                "type": "numeric",
+                "observed_values": [
+                  "1",
+                  "16",
+                  "11",
+                  "6",
+                  "13",
+                  "10",
+                  "15"
+                ],
+                "range": [
+                  1,
+                  16
+                ],
+                "confidence": 1.0,
+                "interpretation": "Language ID, representing different languages for the news content."
+              },
+              "Regid": {
+                "type": "numeric",
+                "observed_values": [
+                  "1",
+                  "5",
+                  "6",
+                  "17",
+                  "22",
+                  "23",
+                  "24"
+                ],
+                "range": [
+                  1,
+                  24
+                ],
+                "confidence": 1.0,
+                "interpretation": "Region ID, representing different regions or bureaus."
+              }
+            },
+            "dependencies": [],
+            "suggestions": [
+              {
+                "ModId": "7",
+                "Lang": "1",
+                "Regid": "1",
+                "confidence": 0.7,
+                "reasoning": "ModId between observed values, default language and region."
+              },
+              {
+                "ModId": "9",
+                "Lang": "1",
+                "Regid": "1",
+                "confidence": 0.7,
+                "reasoning": "ModId between observed values, default language and region."
+              },
+              {
+                "ModId": "6",
+                "Lang": "2",
+                "Regid": "1",
+                "confidence": 0.6,
+                "reasoning": "Next language ID, default region, known ModId."
+              },
+              {
+                "ModId": "6",
+                "Lang": "1",
+                "Regid": "2",
+                "confidence": 0.6,
+                "reasoning": "Next region ID, default language, known ModId."
+              },
+              {
+                "ModId": "10",
+                "Lang": "15",
+                "Regid": "24",
+                "confidence": 0.5,
+                "reasoning": "Max observed Lang and Regid, known ModId."
+              },
+              {
+                "ModId": "6",
+                "Lang": "7",
+                "Regid": "17",
+                "confidence": 0.4,
+                "reasoning": "Next language ID after observed, known ModId and Regid."
+              },
+              {
+                "ModId": "8",
+                "Lang": "12",
+                "Regid": "6",
+                "confidence": 0.4,
+                "reasoning": "Next language ID after observed, known ModId and Regid."
+              },
+              {
+                "ModId": "10",
+                "Lang": "14",
+                "Regid": "22",
+                "confidence": 0.4,
+                "reasoning": "Next language ID after observed, known ModId and Regid."
+              },
+              {
+                "ModId": "7",
+                "Lang": "16",
+                "Regid": "5",
+                "confidence": 0.3,
+                "reasoning": "ModId between observed values, max language and region."
+              },
+              {
+                "ModId": "9",
+                "Lang": "11",
+                "Regid": "6",
+                "confidence": 0.3,
+                "reasoning": "ModId between observed values, known language and region."
+              },
+              {
+                "ModId": "7",
+                "Lang": "6",
+                "Regid": "17",
+                "confidence": 0.3,
+                "reasoning": "ModId between observed values, known language and region."
+              },
+              {
+                "ModId": "9",
+                "Lang": "13",
+                "Regid": "22",
+                "confidence": 0.3,
+                "reasoning": "ModId between observed values, known language and region."
+              },
+              {
+                "ModId": "6",
+                "Lang": "1",
+                "Regid": "3",
+                "confidence": 0.5,
+                "reasoning": "Known ModId and Lang, next Regid."
+              },
+              {
+                "ModId": "8",
+                "Lang": "1",
+                "Regid": "3",
+                "confidence": 0.4,
+                "reasoning": "Known ModId and Lang, next Regid."
+              },
+              {
+                "ModId": "10",
+                "Lang": "1",
+                "Regid": "3",
+                "confidence": 0.4,
+                "reasoning": "Known ModId and Lang, next Regid."
+              }
+            ],
+            "coverage": {
+              "estimated_total_feeds": 1104,
+              "discovered_so_far": 20,
+              "coverage_percent": 1.81
+            }
+          }
+        },
+        {
+          "iteration": 3,
+          "domain": "pib.gov.in",
+          "timestamp": "2025-10-24T19:32:55.751635",
+          "candidates_generated": 40,
+          "candidates_validated": 25,
+          "new_feeds_found": 25,
+          "success_rate": 1.0,
+          "generation_efficiency": 0.625,
+          "strategy": "hybrid",
+          "patterns": {
+            "domain": "www.pib.gov.in",
+            "path": "/RssMain.aspx",
+            "path_patterns": [
+              "/RssMain.aspx"
+            ],
+            "parameters": {
+              "ModId": {
+                "type": "numeric",
+                "observed_values": [
+                  "6",
+                  "10",
+                  "8"
+                ],
+                "range": [
+                  6,
+                  10
+                ],
+                "confidence": 1.0,
+                "interpretation": "Module ID, likely representing different sections or categories of news."
+              },
+              "Lang": {
+                "type": "numeric",
+                "observed_values": [
+                  "1",
+                  "16",
+                  "11",
+                  "6",
+                  "13",
+                  "10",
+                  "15"
+                ],
+                "range": [
+                  1,
+                  16
+                ],
+                "confidence": 1.0,
+                "interpretation": "Language ID, representing different languages the news is available in."
+              },
+              "Regid": {
+                "type": "numeric",
+                "observed_values": [
+                  "1",
+                  "5",
+                  "6",
+                  "17",
+                  "22",
+                  "23",
+                  "24"
+                ],
+                "range": [
+                  1,
+                  24
+                ],
+                "confidence": 1.0,
+                "interpretation": "Region ID, representing different regions or bureaus of the Press Information Bureau."
+              }
+            },
+            "dependencies": [],
+            "suggestions": [
+              {
+                "ModId": "6",
+                "Lang": "2",
+                "Regid": "1",
+                "confidence": 0.7,
+                "reasoning": "Trying a new language ID with existing ModId and Regid."
+              },
+              {
+                "ModId": "8",
+                "Lang": "2",
+                "Regid": "1",
+                "confidence": 0.7,
+                "reasoning": "Trying a new language ID with existing ModId and Regid."
+              },
+              {
+                "ModId": "10",
+                "Lang": "2",
+                "Regid": "1",
+                "confidence": 0.7,
+                "reasoning": "Trying a new language ID with existing ModId and Regid."
+              },
+              {
+                "ModId": "6",
+                "Lang": "1",
+                "Regid": "2",
+                "confidence": 0.7,
+                "reasoning": "Trying a new region ID with existing ModId and Lang."
+              },
+              {
+                "ModId": "8",
+                "Lang": "1",
+                "Regid": "2",
+                "confidence": 0.7,
+                "reasoning": "Trying a new region ID with existing ModId and Lang."
+              },
+              {
+                "ModId": "10",
+                "Lang": "1",
+                "Regid": "2",
+                "confidence": 0.7,
+                "reasoning": "Trying a new region ID with existing ModId and Lang."
+              },
+              {
+                "ModId": "7",
+                "Lang": "1",
+                "Regid": "1",
+                "confidence": 0.5,
+                "reasoning": "Trying a new ModId within the observed range."
+              },
+              {
+                "ModId": "9",
+                "Lang": "1",
+                "Regid": "1",
+                "confidence": 0.5,
+                "reasoning": "Trying a new ModId within the observed range."
+              },
+              {
+                "ModId": "6",
+                "Lang": "7",
+                "Regid": "17",
+                "confidence": 0.6,
+                "reasoning": "Trying a new language ID close to existing ones."
+              },
+              {
+                "ModId": "8",
+                "Lang": "7",
+                "Regid": "17",
+                "confidence": 0.6,
+                "reasoning": "Trying a new language ID close to existing ones."
+              },
+              {
+                "ModId": "10",
+                "Lang": "7",
+                "Regid": "17",
+                "confidence": 0.6,
+                "reasoning": "Trying a new language ID close to existing ones."
+              },
+              {
+                "ModId": "6",
+                "Lang": "1",
+                "Regid": "3",
+                "confidence": 0.6,
+                "reasoning": "Trying a new region ID close to existing ones."
+              },
+              {
+                "ModId": "8",
+                "Lang": "1",
+                "Regid": "3",
+                "confidence": 0.6,
+                "reasoning": "Trying a new region ID close to existing ones."
+              },
+              {
+                "ModId": "10",
+                "Lang": "1",
+                "Regid": "3",
+                "confidence": 0.6,
+                "reasoning": "Trying a new region ID close to existing ones."
+              },
+              {
+                "ModId": "6",
+                "Lang": "12",
+                "Regid": "6",
+                "confidence": 0.6,
+                "reasoning": "Trying a new language ID close to existing ones."
+              }
+            ],
+            "coverage": {
+              "estimated_total_feeds": 1000,
+              "discovered_so_far": 20,
+              "coverage_percent": 2
+            }
+          }
+        },
+        {
+          "iteration": 4,
+          "domain": "pib.gov.in",
+          "timestamp": "2025-10-24T19:39:05.336631",
+          "candidates_generated": 40,
+          "candidates_validated": 26,
+          "new_feeds_found": 26,
+          "success_rate": 1.0,
+          "generation_efficiency": 0.65,
+          "strategy": "hybrid",
+          "patterns": {
+            "domain": "www.pib.gov.in",
+            "path": "/RssMain.aspx",
+            "path_patterns": [
+              "/RssMain.aspx"
+            ],
+            "parameters": {
+              "ModId": {
+                "type": "numeric",
+                "observed_values": [
+                  "6",
+                  "10",
+                  "8"
+                ],
+                "range": [
+                  6,
+                  10
+                ],
+                "confidence": 1.0,
+                "interpretation": "Module ID, likely representing different sections or categories of news."
+              },
+              "Lang": {
+                "type": "numeric",
+                "observed_values": [
+                  "1",
+                  "16",
+                  "11",
+                  "6",
+                  "13",
+                  "10",
+                  "15"
+                ],
+                "range": null,
+                "confidence": 1.0,
+                "interpretation": "Language ID, representing different languages for the news content."
+              },
+              "Regid": {
+                "type": "numeric",
+                "observed_values": [
+                  "1",
+                  "5",
+                  "6",
+                  "17",
+                  "22",
+                  "23",
+                  "24"
+                ],
+                "range": null,
+                "confidence": 1.0,
+                "interpretation": "Region ID, representing different regions or bureaus."
+              }
+            },
+            "dependencies": [],
+            "suggestions": [
+              {
+                "ModId": "7",
+                "Lang": "1",
+                "Regid": "1",
+                "confidence": 0.6,
+                "reasoning": "ModId between observed values, default language and region."
+              },
+              {
+                "ModId": "9",
+                "Lang": "1",
+                "Regid": "1",
+                "confidence": 0.6,
+                "reasoning": "ModId between observed values, default language and region."
+              },
+              {
+                "ModId": "6",
+                "Lang": "2",
+                "Regid": "1",
+                "confidence": 0.4,
+                "reasoning": "Next language ID, default region."
+              },
+              {
+                "ModId": "6",
+                "Lang": "1",
+                "Regid": "2",
+                "confidence": 0.4,
+                "reasoning": "Next region ID, default language."
+              },
+              {
+                "ModId": "7",
+                "Lang": "16",
+                "Regid": "5",
+                "confidence": 0.5,
+                "reasoning": "ModId between observed values, language 16 and region 5."
+              },
+              {
+                "ModId": "9",
+                "Lang": "16",
+                "Regid": "5",
+                "confidence": 0.5,
+                "reasoning": "ModId between observed values, language 16 and region 5."
+              },
+              {
+                "ModId": "6",
+                "Lang": "11",
+                "Regid": "7",
+                "confidence": 0.5,
+                "reasoning": "Next region ID, language 11."
+              },
+              {
+                "ModId": "6",
+                "Lang": "7",
+                "Regid": "17",
+                "confidence": 0.5,
+                "reasoning": "Next language ID, region 17."
+              },
+              {
+                "ModId": "6",
+                "Lang": "13",
+                "Regid": "23",
+                "confidence": 0.5,
+                "reasoning": "Language 13, next region ID."
+              },
+              {
+                "ModId": "6",
+                "Lang": "10",
+                "Regid": "24",
+                "confidence": 0.5,
+                "reasoning": "Language 10, next region ID."
+              },
+              {
+                "ModId": "10",
+                "Lang": "15",
+                "Regid": "24",
+                "confidence": 0.5,
+                "reasoning": "ModId 10, language 15, region 24."
+              },
+              {
+                "ModId": "7",
+                "Lang": "15",
+                "Regid": "24",
+                "confidence": 0.5,
+                "reasoning": "ModId between observed values, language 15, region 24."
+              },
+              {
+                "ModId": "9",
+                "Lang": "15",
+                "Regid": "24",
+                "confidence": 0.5,
+                "reasoning": "ModId between observed values, language 15, region 24."
+              },
+              {
+                "ModId": "6",
+                "Lang": "12",
+                "Regid": "6",
+                "confidence": 0.4,
+                "reasoning": "Next language ID, region 6."
+              },
+              {
+                "ModId": "6",
+                "Lang": "14",
+                "Regid": "22",
+                "confidence": 0.4,
+                "reasoning": "Next language ID, region 22."
+              }
+            ],
+            "coverage": {
+              "estimated_total_feeds": 300,
+              "discovered_so_far": 20,
+              "coverage_percent": 6.67
+            }
+          }
+        }
+      ]
+    }
+  },
+  "analysis": {
+    "convergence": {
+      "converging": false,
+      "reason": "Good discovery rate maintained",
+      "confidence": 0.7,
+      "recommendation": "Continue iterations"
+    },
+    "strategy_recommendation": {
+      "recommended": "hybrid",
+      "score": 0.813,
+      "avg_success_rate": 1.0,
+      "avg_efficiency": 0.5325,
+      "times_used": 4,
+      "all_strategies": {
+        "hybrid": {
+          "score": 0.813,
+          "avg_success": 1.0,
+          "avg_efficiency": 0.5325,
+          "uses": 4
+        }
+      },
+      "confidence": 0.813
+    },
+    "phase_results": {
+      "phase_1": {
+        "status": "loaded_from_checkpoint",
+        "feeds_discovered": 36,
+        "feeds_validated": 21,
+        "validation_rate": 0.5833333333333334
+      }
+    }
+  },
+  "insights": [
+    "✅ Iteration 1: High success rate (100.0%)",
+    "Strategy 'hybrid' provides balanced exploration",
+    "Coverage low (0%) - significant potential remains",
+    "✅ Iteration 2: High success rate (100.0%)",
+    "Strategy 'hybrid' provides balanced exploration",
+    "Coverage low (1.81%) - significant potential remains",
+    "✅ Iteration 3: High success rate (100.0%)",
+    "Strategy 'hybrid' provides balanced exploration",
+    "Coverage low (2%) - significant potential remains",
+    "✅ Iteration 4: High success rate (100.0%)",
+    "Strategy 'hybrid' provides balanced exploration",
+    "Coverage low (6.67%) - significant potential remains"
+  ]
+}
