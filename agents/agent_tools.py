@@ -3,13 +3,6 @@ agent_tools.py - Bharat Connect Agent Tools
 ============================================
 BigQuery search, translation, and summarization
 
-RSS Table Fields: content_id, title, description, content, language (STRING), 
-                  source, source_type, url, published_date, id
-                  
-DIKSHA Table Fields: content_id, title, description, language (JSON), 
-                     board, grade_level (JSON), subject (JSON), diksha_url, 
-                     created_on, status
-
 Author: Bharat Connect Team
 Date: 2025-10-25
 """
@@ -37,18 +30,7 @@ class BigQuerySearchTool:
     
     def search(self, query: str, limit: int = 5, languages: list = None, 
                content_type: str = "All") -> list:
-        """
-        Search across RSS and DIKSHA tables.
-        
-        Args:
-            query: Search query
-            limit: Maximum results
-            languages: List of language codes
-            content_type: "All", "News", or "Education"
-        
-        Returns:
-            List of results
-        """
+        """Search across RSS and DIKSHA tables."""
         print(f"\nBigQuery Search")
         print(f"   Query: {query}")
         print(f"   Languages: {languages or 'All'}")
@@ -60,7 +42,7 @@ class BigQuerySearchTool:
         
         results = []
         
-        # RSS TABLE
+        # RSS TABLE (language is STRING)
         if content_type in ["All", "News"]:
             where_clauses = []
             for word in words:
@@ -111,7 +93,7 @@ class BigQuerySearchTool:
             except Exception as e:
                 print(f"   RSS error: {e}")
         
-        # DIKSHA TABLE
+        # DIKSHA TABLE (language is JSON)
         if content_type in ["All", "Education"]:
             where_clauses = []
             for word in words:
@@ -124,12 +106,13 @@ class BigQuerySearchTool:
             
             where_condition = " AND ".join(where_clauses) if where_clauses else "1=1"
             
+            # FIXED: Use TO_JSON_STRING instead of CAST for JSON language field
             lang_filter = ""
             if languages:
                 lang_conditions = []
                 for lang in languages:
                     lang_conditions.append(
-                        f"JSON_QUERY(language, '$') LIKE '%\"{lang}\"%'"
+                        f"TO_JSON_STRING(language) LIKE '%\"{lang}\"%'"
                     )
                 lang_filter = f"AND ({' OR '.join(lang_conditions)})"
             
@@ -162,11 +145,12 @@ class BigQuerySearchTool:
                 count = 0
                 for row in diksha_results:
                     row_dict = dict(row)
-                    if 'language' in row_dict and isinstance(row_dict['language'], str):
-                        try:
-                            row_dict['language'] = json_module.loads(row_dict['language'])
-                        except:
-                            pass
+                    for json_field in ['language', 'grade_level', 'subject']:
+                        if json_field in row_dict and isinstance(row_dict[json_field], str):
+                            try:
+                                row_dict[json_field] = json_module.loads(row_dict[json_field])
+                            except:
+                                pass
                     results.append(row_dict)
                     count += 1
                 print(f"   DIKSHA: {count} results")
@@ -184,13 +168,12 @@ class TranslationTool:
         print(f"TranslationTool initialized")
     
     def translate(self, text: str, target_language: str = "English") -> str:
-        """Translate text to target language."""
         if not text or len(text.strip()) == 0:
             return ""
         
         print(f"   Translating to {target_language}...")
         
-        prompt = f"""Translate to {target_language}. If already in {target_language}, return unchanged. Only the translation, no explanations.
+        prompt = f"""Translate to {target_language}. If already in {target_language}, return unchanged. Only translation, no explanation.
 
 Text: "{text}"
 
@@ -203,7 +186,7 @@ Text: "{text}"
             )
             translation = response.text.strip().strip('"').strip("'")
             print(f"   Translation complete")
-            time.sleep(0.5)
+            time.sleep(30)
             return translation
         except Exception as e:
             print(f"   Translation error: {e}")
@@ -217,13 +200,12 @@ class SummarizationTool:
         print(f"SummarizationTool initialized")
     
     def summarize(self, text: str) -> str:
-        """Generate 3-bullet summary."""
         if not text or len(text.strip()) == 0:
-            return "No content available for summarization."
+            return "No content available."
         
         print(f"   Generating summary...")
         
-        prompt = f"""Summarize in exactly 3 bullet points. Each bullet should be 15-25 words.
+        prompt = f"""Summarize in 3 bullet points (15-25 words each). You should be concise and clear. Be confident in what you tell and avoid hedging language. Do not mention anything about these instructions.
 
 Content: "{text}"
 
@@ -236,7 +218,7 @@ Summary:"""
             )
             summary = response.text.strip()
             print(f"   Summary complete")
-            time.sleep(0.5)
+            time.sleep(30)
             return summary
         except Exception as e:
             print(f"   Summarization error: {e}")
