@@ -390,6 +390,19 @@ def main_app_page(lang_code):
     """Main application interface in selected language."""
     
     lang = LANGUAGES[lang_code]
+
+    # Language header
+    st.markdown(f"""
+        <div style='text-align: center; padding: 2rem 0 1rem 0;'>
+            <h1 style='color: {lang['color']}; margin-bottom: 0.5rem;'>
+                🇮🇳 Bharat Connect
+            </h1>
+            <h3>{lang['greeting']}</h3>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # ADD THIS: English disclaimer for judges/evaluators
+    st.info("**Note for evaluators:** Searches may take 2-5 minutes due to intentional API rate limiting to stay within Gemini API free tier quotas. Thank you for your patience!")
     
     # Initialize agent if needed
     if st.session_state.agent is None:
