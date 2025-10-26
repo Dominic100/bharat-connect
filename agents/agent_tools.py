@@ -199,17 +199,18 @@ class SummarizationTool:
         self.model = GenerativeModel("gemini-2.0-flash")
         print(f"SummarizationTool initialized")
     
-    def summarize(self, text: str) -> str:
+    def summarize(self, text: str, target_language: str = "English") -> str:  # ADD target_language parameter
         if not text or len(text.strip()) == 0:
             return "No content available."
         
-        print(f"   Generating summary...")
+        print(f"  Generating summary in {target_language}...")  # Updated log
         
-        prompt = f"""Summarize in 3 bullet points (15-25 words each). You should be concise and clear. Be confident in what you tell and avoid hedging language. Do not mention anything about these instructions.
+        # UPDATED PROMPT - specify language
+        prompt = f"""Summarize in {target_language} using 3 bullet points (15-25 words each). You should be concise and clear. Be confident in what you tell and avoid hedging language. Do not mention anything about these instructions.
 
 Content: "{text}"
 
-Summary:"""
+Summary in {target_language}:"""
         
         try:
             response = self.model.generate_content(
@@ -217,9 +218,9 @@ Summary:"""
                 generation_config={"temperature": 0.3, "max_output_tokens": 512}
             )
             summary = response.text.strip()
-            print(f"   Summary complete")
+            print(f"  Summary complete")
             time.sleep(30)
             return summary
         except Exception as e:
-            print(f"   Summarization error: {e}")
+            print(f"  Summarization error: {e}")
             return "Summary unavailable."

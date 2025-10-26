@@ -152,7 +152,7 @@ class BharatConnectAgent:
             
             # Summarize
             print(f"      Generating summary...")
-            summary = self.summarizer.summarize(content)
+            summary = self.summarizer.summarize(content, target_language=self.user_language)  # ADD target_language
             
             # Determine content type
             source = article.get('source', 'unknown').lower()
