@@ -14,6 +14,47 @@ Date: 2025-10-25
 import streamlit as st
 from agents.bharat_agent import BharatConnectAgent
 import os
+from google.oauth2 import service_account  # ADD THIS
+import vertexai  # ADD THIS
+
+# ============================================================================
+# GOOGLE CLOUD CREDENTIALS SETUP (FOR STREAMLIT CLOUD)
+# ============================================================================
+
+def init_google_cloud():
+    """Initialize Google Cloud credentials for both local and cloud deployment"""
+    
+    if hasattr(st, 'secrets') and 'gcp_service_account' in st.secrets:
+        # Running on Streamlit Cloud - use secrets
+        print("✅ Using Streamlit Cloud secrets")
+        
+        os.environ['GCP_PROJECT_ID'] = st.secrets["GCP_PROJECT_ID"]
+        os.environ['GCP_LOCATION'] = st.secrets["GCP_LOCATION"]
+        
+        credentials = service_account.Credentials.from_service_account_info(
+            dict(st.secrets["gcp_service_account"]),
+            scopes=[
+                "https://www.googleapis.com/auth/cloud-platform",
+                "https://www.googleapis.com/auth/bigquery"
+            ]
+        )
+        
+        vertexai.init(
+            project=st.secrets["GCP_PROJECT_ID"],
+            location=st.secrets["GCP_LOCATION"],
+            credentials=credentials
+        )
+        
+        return credentials
+    else:
+        # Running locally
+        print("✅ Using local .env file")
+        from dotenv import load_dotenv
+        load_dotenv()
+        return None
+
+# Initialize on app start
+init_google_cloud()
 
 # ============================================================================
 # PAGE CONFIGURATION
