@@ -81,23 +81,31 @@ class BharatConnectAgent:
         
         # STEP 2: If no results, try all languages
         if not results or len(results) == 0:
-            print(f"   No results in {self.user_language}")
+            print(f"  No results in {self.user_language}")
             print(f"Step 2: Searching in ALL languages...")
             
-            results = self.searcher.search(
-                query,
-                limit=limit * 3,
-                languages=None
-            )
+            # Try both original query and English translation
+            queries_to_try = [query]
+            
+            if self.user_language_code != 'en':
+                try:
+                    translated_query = self.translator.translate(query, target_language="English")
+                    print(f"  Translated: {query} → {translated_query}")
+                    queries_to_try.append(translated_query)
+                except Exception as e:
+                    print(f"  Translation failed: {e}")
+            
+            # Search with all query variants
+            for q in queries_to_try:
+                results = self.searcher.search(
+                    q,
+                    limit=limit * 2,
+                    languages=None
+                )
+                if results and len(results) > 0:
+                    break  # Stop on first successful search
             
             cross_language_used = True
-            
-            if results and len(results) > 0:
-                print(f"Found {len(results)} results in other languages")
-            else:
-                print(f"No results in any language")
-        else:
-            print(f"Found {len(results)} results in {self.user_language}")
         
         # STEP 3: Handle no results
         if not results or len(results) == 0:
@@ -130,7 +138,7 @@ class BharatConnectAgent:
             
             print(f"      Original Language: {original_lang_name} ({original_lang_code})")
             
-            needs_translation = (original_lang_code != self.user_language_code)
+            needs_translation = True # to force quality assurance
             
             # Get title
             original_title = article.get('title', 'No title')

@@ -72,7 +72,7 @@ class BigQuerySearchTool:
                         f"LOWER(COALESCE(content, '')) LIKE LOWER('%{esc}%'))"
                     )
             
-            where_condition = " AND ".join(where_clauses) if where_clauses else "1=1"
+            where_condition = " OR ".join(where_clauses) if where_clauses else "1=1"
             
             lang_filter = ""
             if languages:
@@ -122,7 +122,7 @@ class BigQuerySearchTool:
                         f"LOWER(COALESCE(description, '')) LIKE LOWER('%{esc}%'))"
                     )
             
-            where_condition = " AND ".join(where_clauses) if where_clauses else "1=1"
+            where_condition = " OR ".join(where_clauses) if where_clauses else "1=1"
             
             # FIXED: Use TO_JSON_STRING instead of CAST for JSON language field
             lang_filter = ""
@@ -204,7 +204,7 @@ Text: "{text}"
             )
             translation = response.text.strip().strip('"').strip("'")
             print(f"   Translation complete")
-            time.sleep(30)
+            time.sleep(20)
             return translation
         except Exception as e:
             print(f"   Translation error: {e}")
@@ -237,7 +237,7 @@ Summary in {target_language}:"""
             )
             summary = response.text.strip()
             print(f"  Summary complete")
-            time.sleep(30)
+            time.sleep(20)
             return summary
         except Exception as e:
             print(f"  Summarization error: {e}")

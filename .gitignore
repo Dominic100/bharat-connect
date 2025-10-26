@@ -13,3 +13,4 @@ client-creds.json
 service-account-key.json
 rag-feed-system-arch.md
 run_connector_local.py
+demo-video/

@@ -13,7 +13,7 @@ Generates:
 
 Author: Bharat Connect Team
 Date: 2025-10-25
-Version: 3.0 (Full Code Generation)
+Version: 4.0 (Full Code Generation)
 """
 
 import json
@@ -114,24 +114,47 @@ SCHEMA = [
 # ============================================================================
 
 def detect_language(text: str, source_name: str = '') -> str:
-    """Detect language from text and source name."""
+    """Detect language using IndicLID for Hindi/Marathi distinction."""
     if not text:
         return 'en'
     
+    # STEP 1: Check source name (most reliable)
     source_lower = source_name.lower()
-    language_map = {{
-        'marathi': 'mr', 'hindi': 'hi', 'tamil': 'ta',
-        'telugu': 'te', 'gujarati': 'gu', 'kannada': 'kn',
-        'malayalam': 'ml', 'bengali': 'bn', 'punjabi': 'pa',
-        'assamese': 'as', 'odia': 'or', 'urdu': 'ur'
-    }}
+    lang_keywords = {
+        'marathi': 'mr', 'hindi': 'hi', 'tamil': 'ta', 'telugu': 'te',
+        'gujarati': 'gu', 'kannada': 'kn', 'malayalam': 'ml',
+        'bengali': 'bn', 'punjabi': 'pa', 'english': 'en'
+    }
     
-    for lang_name, lang_code in language_map.items():
+    for lang_name, lang_code in lang_keywords.items():
         if lang_name in source_lower:
             return lang_code
     
-    text_sample = text[:100]
-    if any('\\u0900' <= char <= '\\u097F' for char in text_sample): return 'hi'
+    # STEP 2: Use statistical language detection for Devanagari text
+    text_sample = text[:300]
+    
+    if any('\\u0900' <= char <= '\\u097F' for char in text_sample):
+        # Devanagari script detected - could be Hindi or Marathi
+        try:
+            from indiclid.inference import langid_lid_predict
+            
+            detected = langid_lid_predict([text_sample])[0][0]
+            
+            # IndicLID returns format: "hin_Deva" or "mar_Deva"
+            lang_map = {
+                'hin_Deva': 'hi',
+                'mar_Deva': 'mr',
+                'nep_Deva': 'hi',  # Map Nepali to Hindi
+            }
+            
+            result = lang_map.get(detected, 'hi')
+            print(f"  IndicLID detected: {detected} -> {result}")
+            return result
+        except Exception as e:
+            print(f"  IndicLID failed: {e}, using lexical fallback")
+            return detect_hindi_vs_marathi_lexical(text_sample)
+    
+    # STEP 3: Other scripts (Unicode range detection)
     if any('\\u0B80' <= char <= '\\u0BFF' for char in text_sample): return 'ta'
     if any('\\u0C00' <= char <= '\\u0C7F' for char in text_sample): return 'te'
     if any('\\u0A80' <= char <= '\\u0AFF' for char in text_sample): return 'gu'
@@ -139,7 +162,43 @@ def detect_language(text: str, source_name: str = '') -> str:
     if any('\\u0D00' <= char <= '\\u0D7F' for char in text_sample): return 'ml'
     if any('\\u0980' <= char <= '\\u09FF' for char in text_sample): return 'bn'
     if any('\\u0A00' <= char <= '\\u0A7F' for char in text_sample): return 'pa'
+    
     return 'en'
+
+
+def detect_hindi_vs_marathi_lexical(text: str) -> str:
+    """Fallback lexical detection for Hindi vs Marathi."""
+    
+    # Marathi-specific markers
+    marathi_markers = [
+        'आहे', 'आहेत', 'असतो', 'असते',  # Verb forms
+        'मी', 'तू', 'तुम्ही',  # Pronouns
+        'मध्ये', 'ला', 'ने',  # Postpositions
+        'काय', 'कसे', 'कुठे',  # Question words
+        'महाराष्ट्र', 'मुंबई', 'पुणे'  # Place names
+    ]
+    
+    # Hindi-specific markers
+    hindi_markers = [
+        'है', 'हैं', 'था', 'थी', 'थे',  # Verb forms
+        'मैं', 'तुम', 'आप',  # Pronouns
+        'में', 'को', 'से',  # Postpositions
+        'क्या', 'कैसे', 'कहाँ', 'कब',  # Question words
+        'दिल्ली', 'भारत'  # Place names
+    ]
+    
+    marathi_count = sum(1 for m in marathi_markers if m in text)
+    hindi_count = sum(1 for m in hindi_markers if m in text)
+    
+    # Check for Marathi-specific character (ळ)
+    marathi_char_bonus = text.count('ळ') * 2
+    
+    if marathi_count + marathi_char_bonus > hindi_count:
+        return 'mr'
+    elif hindi_count > 0:
+        return 'hi'
+    
+    return 'hi'
 
 def validate_entry(entry: Dict, source_name: str) -> Tuple[bool, str]:
     """Validate RSS entry - MUST have URL and title."""
@@ -370,8 +429,12 @@ def generate_connector(discovery_data, feeds):
     )
 
 def generate_requirements():
-    """Generate requirements.txt content."""
-    return "feedparser==6.0.10\n"
+    """Generate requirements.txt with IndicLID."""
+    requirements = """feedparser
+fivetran-connector-sdk
+indiclid
+"""
+    return requirements
 
 # ============================================================================
 # MAIN
