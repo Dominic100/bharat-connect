@@ -18,16 +18,34 @@ class BigQuerySearchTool:
     """Search across RSS and DIKSHA tables."""
     
     def __init__(self, project_id: str):
-        self.client = bigquery.Client(project=project_id)
-        self.project_id = project_id
+        """Initialize BigQuery search tool with proper credentials"""
         
+        # Get credentials from Streamlit secrets if available
+        try:
+            import streamlit as st
+            from google.oauth2 import service_account
+            
+            if 'gcp_service_account' in st.secrets:
+                # Running on Streamlit Cloud - use secrets
+                credentials = service_account.Credentials.from_service_account_info(
+                    dict(st.secrets["gcp_service_account"])
+                )
+                self.client = bigquery.Client(project=project_id, credentials=credentials)
+            else:
+                # Local with default credentials
+                self.client = bigquery.Client(project=project_id)
+        except:
+            # Fallback: use default credentials (works locally with GOOGLE_APPLICATION_CREDENTIALS)
+            self.client = bigquery.Client(project=project_id)
+        
+        self.project_id = project_id
         self.rss_table = f"{project_id}.rss_connector.rss_content"
         self.diksha_table = f"{project_id}.diksha_connector.diksha_content"
         
         print(f"BigQuerySearchTool initialized")
-        print(f"   RSS: {self.rss_table}")
-        print(f"   DIKSHA: {self.diksha_table}")
-    
+        print(f"  RSS: {self.rss_table}")
+        print(f"  DIKSHA: {self.diksha_table}")
+
     def search(self, query: str, limit: int = 5, languages: list = None, 
                content_type: str = "All") -> list:
         """Search across RSS and DIKSHA tables."""
